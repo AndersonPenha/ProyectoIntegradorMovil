@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\android",
-    "\\android\\app\\build\\intermediates\\compile_and_runtime_not_namespaced_r_class_jar",
+    "\\android\\app",
     "\\android\\app\\src",
-    "\\android\\app\\src\\main",
+    "\\android\\app\\src\\debug",
     "\\screens"
   ],
   "SelectedNode": "\\App.js",

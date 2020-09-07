@@ -1,15 +1,30 @@
-import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import React, {Component} from 'react';
+import { View, Text, Button, StyleSheet, TouchableOpacity, Linking } from 'react-native';
+import QRCodeScanner from 'react-native-qrcode-scanner';
+import { RNCamera } from 'react-native-camera';
+import ReactDOM from "react-dom";
+
+    onSuccess = e => {
+     const data  = e.data;
+     console.log (data);
+	}
 
 const QrScreen = () => {
+   
     return (
       <View style={styles.container}>
+      <QRCodeScanner
+        onRead={this.onSuccess}
+        flashMode={RNCamera.Constants.FlashMode.off}
+        showMarker={true}
+        reactivate={true}
+      />
         <Text>QrScreen</Text>
         <Button
-          title="Click Here"
-          onPress={() => alert('Button Clicked!')}
+          title="Registro Diario"
         />
       </View>
+      
     );
 };
 
@@ -22,3 +37,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 });
+
+
