@@ -4,7 +4,7 @@ import QRCodeScanner from 'react-native-qrcode-scanner';
 import { RNCamera } from 'react-native-camera';
 import ReactDOM from "react-dom";
 
-    onSuccess = e => {
+    const onSuccess = () => {
      const data  = e.data;
      console.log (data);
 	}
@@ -19,10 +19,6 @@ const QrScreen = () => {
         showMarker={true}
         reactivate={true}
       />
-        <Text>QrScreen</Text>
-        <Button
-          title="Registro Diario"
-        />
       </View>
       
     );

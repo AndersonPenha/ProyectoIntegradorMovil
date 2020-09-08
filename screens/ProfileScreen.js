@@ -1,12 +1,35 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, TextInput } from 'react-native';
 
-const ProfileScreen = () => {
+const ProfileScreen = ({navigation}) => {
     return (
       <View style={styles.container}>
-        <Text>Profile Screen</Text>
+        <Text>Llenar Formulario</Text>
+         <TextInput
+            placeholder="ID"
+        />
+         <TextInput
+            placeholder="Dia Recoleccion"
+        />
+         <TextInput
+            placeholder="Hora Recoleccion"
+        />
+         <TextInput
+            placeholder="Descripcion"
+        />
+        <TextInput
+            style={styles.input}
+            placeholder="Estado"
+         />
+
+        <TextInput
+            placeholder="User"
+        />
+        <TextInput
+            placeholder="Bote de Basura"
+        />
         <Button
-          title="Click Here"
+          title="Enviar Datos"
           onPress={() => alert('Button Clicked!')}
         />
       </View>

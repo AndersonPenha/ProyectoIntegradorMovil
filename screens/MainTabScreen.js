@@ -13,7 +13,6 @@ import DrawerContent from './DrawerContent';
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
-
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -36,25 +35,14 @@ const MainTabScreen = () => (
         name="Notifications"
         component={DetailsStackScreen}
         options={{
-          tabBarLabel: 'Updates',
+          tabBarLabel: 'Calendario',
           tabBarColor: '#1f65ff',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-notifications" color={color} size={26} />
+            <Icon name="ios-calendar" color={color} size={26} />
           ),
         }}
       />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          tabBarLabel: 'Profile',
-          tabBarColor: '#694fad',
-          tabBarIcon: ({ color }) => (
-            <Icon name="ios-person" color={color} size={26} />
-          ),
-        }}
-      />
-      <Tab.Screen
+       <Tab.Screen
         name="QR"
         component={QrScreen}
         options={{
@@ -62,6 +50,17 @@ const MainTabScreen = () => (
           tabBarColor: '#d02860',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-aperture" color={color} size={26} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarLabel: 'Formulario',
+          tabBarColor: '#694fad',
+          tabBarIcon: ({ color }) => (
+            <Icon name="ios-bookmarks" color={color} size={26} />
           ),
         }}
       />
@@ -99,9 +98,9 @@ const DetailsStackScreen = ({navigation}) => (
         fontWeight: 'bold'
         }
     }}>
-        <DetailsStack.Screen name="Details" component={DetailsScreen} options={{
+        <DetailsStack.Screen name="Horario" component={DetailsScreen} options={{
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-calendar" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </DetailsStack.Navigator>
